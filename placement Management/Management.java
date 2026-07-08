@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Management {
 
-    // Inner data models to keep the code in a single file
     static class Student {
         int id;
         String name;
@@ -37,13 +36,11 @@ public class Management {
         }
     }
 
-    // Storage simulating a database
     private List<Student> students = new ArrayList<>();
     private List<Company> companies = new ArrayList<>();
     private int studentIdCounter = 101;
     private int companyIdCounter = 501;
 
-    // 1. Student Management Module
     public void studentModule(Scanner scanner) {
         System.out.println("\n--- STUDENT MODULE ---");
         System.out.println("1. Register Student");
@@ -92,8 +89,6 @@ public class Management {
                 System.out.println("Invalid option in Student Module.");
         }
     }
-
-    // 2. Company Management Module
     public void companyModule(Scanner scanner) {
         System.out.println("\n--- COMPANY MODULE ---");
         System.out.println("1. Post a New Job Requirement");
@@ -135,7 +130,6 @@ public class Management {
         }
     }
 
-    // 3. Placement Office (Management) Dashboard Module
     public void managementModule(Scanner scanner) {
         System.out.println("\n--- PLACEMENT CELL MANAGEMENT ---");
         System.out.println("1. View Full Placement Report");
@@ -205,7 +199,6 @@ public class Management {
         }
     }
 
-    // Main function controlling the loop execution flow
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Management system = new Management();
